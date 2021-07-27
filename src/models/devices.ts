@@ -9,6 +9,7 @@ export interface Device {
     location?: Point;
     tags: Tag[];
     interfaces: DeviceInterface;
+    fields: unknown;
 }
 
 export interface Point {
