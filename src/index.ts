@@ -261,6 +261,9 @@ export class ElementKit {
     /* Not in production yet */
     async updateReadings(data: MergeOptions): Promise<UpdatedReadings> {
         return (await this.client.patch<ElementResponse<UpdatedReadings>>(`api/v1/readings`, data)).data.body
+    }    
+    async updateReadingsByDevice(data: MergeOptions, deviceId: string): Promise<UpdatedReadings> {
+        return (await this.client.patch<ElementResponse<UpdatedReadings>>(`api/v1/devices/${deviceId}/readings`, data)).data.body
     }
 }
 
