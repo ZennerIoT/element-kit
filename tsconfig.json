@@ -1,9 +1,12 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "es6",
         "module": "commonjs",
         "declaration": true,
         "outDir": "./lib",
+        "lib": [
+            "es2020"
+        ], /* Specify library files to be included in the compilation. */
         "sourceMap": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
